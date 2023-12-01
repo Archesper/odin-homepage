@@ -16,6 +16,7 @@
 
 .main-text {
   font-family: var(--text-font), sans-serif;
+  color: rgb(105, 105, 105);
 }
 
 header {
@@ -54,7 +55,6 @@ h1 {
 }
 
 .about-me {
-  color: rgb(105, 105, 105);
   margin: 0 6px;
   padding: 0 6px;
   font-size: 1.25rem;
@@ -76,3 +76,41 @@ h1 {
   cursor: pointer;
 }
 
+main {
+  margin: 12px;
+}
+
+.card {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin: 12px 24px;
+}
+
+.card  .icons  :is(img, svg) {
+  width: 24px;
+}
+
+.card .icons {
+  margin: 0;
+  gap: 8px;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-body {
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-placeholder {
+  height: 200px;
+  background-color: antiquewhite;
+}
