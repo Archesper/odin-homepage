@@ -25,17 +25,22 @@ html {
 }
 
 header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-items: center;
-  margin: 12px;
   margin-bottom: 48px;
 }
 
+.header-body {
+  margin: 12px;
+}
+
 .gradient-div {
-  background: linear-gradient(150deg, rgb(8,145,178) 37%, rgba(231,232,232,1) 37%, rgba(255,255,255,1) 38%);
-  height: 100vh;
+  background: rgb(8,145,178);
+  background: linear-gradient(148deg, rgb(8,145,178) 60%, rgba(231,232,232,1) 60%, rgba(255,255,255,1) 62%);
   z-index: -1;
+  height: 50%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -43,8 +48,10 @@ header {
 }
 
 .header-picture {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-wrapper {
@@ -61,6 +68,7 @@ header {
   position: absolute;
   bottom: 12px;
   padding: 4px 6px;
+  width: 100%;
 }
 
 h1 {
@@ -192,6 +200,62 @@ footer h1 {
 }
 
 @media screen and (min-width: 500px) {
+
+  .header-body {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 90px 120px 30px 120px;
+    min-height: 400px;
+  }
+
+  .gradient-div {
+    height: 100%;
+    background: linear-gradient(160deg, rgb(8,145,178) 50%, rgba(231,232,232,1) 50%, rgba(255,255,255,1) 52%);
+
+  }
+
+  header .icons {
+    display: none;
+  }
+
+  .image-wrapper {
+    margin: 0;
+    float: left;
+    width: 50%;
+    height: 50vh;
+    bottom: 60px;
+    margin-bottom: -50px;
+    margin-right: -20px;
+    right: 35px;
+  }
+
+  .full-name {
+    font-size: 2rem;
+    text-shadow: 1px 2px 2px rgba(42,38,38,0.43);
+    bottom: 100%;
+    left: 80%;
+    transform: translateY(100%);
+    width: max-content;
+    background: none;
+  }
+
+  .header-body {
+    z-index: 10;
+    background-color: white;
+  }
+
+  .about-me {
+    line-height: 1.5;
+    font-size: 1rem;
+    width: 95%;
+    padding: 8px;
+  }
+
+  .header h1 {
+    margin: 0;
+    margin-top: 70px;
+  }
+
   main > h1 {
     text-align: start;
     margin-left: 40px;
@@ -220,3 +284,16 @@ footer h1 {
     margin: 0;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .full-name {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
